@@ -5,14 +5,13 @@
         <p><strong>Student number:</strong> {{ $student->student_number }}</p>
         <p><strong>Email:</strong> {{ $student->email }}</p>
         <p><strong>Phone:</strong> {{ $student->phone ?? '-' }}</p>
-        <p><strong>Programme:</strong> {{ $student->program }}</p>
     </div>
 
     <h2 class="mb-2 text-lg font-semibold">Registered courses</h2>
     <div class="overflow-x-auto rounded bg-white shadow">
         <table class="min-w-full text-left text-sm">
             <thead class="bg-gray-50">
-                <tr><th class="p-3">Code</th><th class="p-3">Title</th><th class="p-3">Registered on</th></tr>
+                <tr><th class="p-3">Code</th><th class="p-3">Course name</th><th class="p-3">Registered on</th></tr>
             </thead>
             <tbody>
                 @forelse ($courses as $course)

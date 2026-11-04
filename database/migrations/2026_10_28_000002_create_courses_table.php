@@ -13,7 +13,6 @@ return new class extends Migration
             $table->string('code')->unique();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->unsignedTinyInteger('credits')->default(3);
             // The lecturer is a user with the "lecturer" role
             $table->foreignId('lecturer_id')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamps();

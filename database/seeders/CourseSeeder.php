@@ -15,16 +15,18 @@ class CourseSeeder extends Seeder
         $lecturer3 = User::where('email', 'mritah@mubs.ac.ug')->first();
 
         $courses = [
-            ['BUC3131', 'Advanced Web Application Development', 4, $lecturer1->id],
-            ['BUC3130', 'Mobile Application Development', 4, $lecturer1->id],
-            ['BUC3126', 'Information Security and Auditing', 3, $lecturer3->id],
-            ['BUC2230', 'Business Accounting & Information', 3, $lecturer2->id],
+            ['BBC', 'Bachelor of Business Computing', $lecturer1->id],
+            ['BBA', 'Bachelor of Business Administration', $lecturer2->id],
+            ['PROC', 'Bachelors in Procurement and Logistics Management', $lecturer3->id],
+            ['BSA', 'Bachelor of Science in accounting', $lecturer2->id],
+            ['LEIS', 'Bachelor in Leisure and Hospitality Management', $lecturer3->id],
+            ['BCS', 'Bachelor in Computer Science', $lecturer1->id],
         ];
 
-        foreach ($courses as [$code, $title, $credits, $lecturerId]) {
+        foreach ($courses as [$code, $title, $lecturerId]) {
             Course::firstOrCreate(
                 ['code' => $code],
-                ['title' => $title, 'credits' => $credits, 'lecturer_id' => $lecturerId]
+                ['title' => $title, 'lecturer_id' => $lecturerId]
             );
         }
     }

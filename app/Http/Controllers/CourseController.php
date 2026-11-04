@@ -53,7 +53,6 @@ class CourseController extends Controller
             'code' => 'required|max:20|unique:courses,code',
             'title' => 'required|max:255',
             'description' => 'nullable|max:2000',
-            'credits' => 'required|integer|between:1,10',
             'lecturer_id' => 'nullable|exists:users,id',
         ]);
 
@@ -74,7 +73,6 @@ class CourseController extends Controller
             'code' => 'required|max:20|unique:courses,code,' . $course->id,
             'title' => 'required|max:255',
             'description' => 'nullable|max:2000',
-            'credits' => 'required|integer|between:1,10',
             'lecturer_id' => 'nullable|exists:users,id',
         ]);
 
