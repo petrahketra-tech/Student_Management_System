@@ -5,15 +5,15 @@
         <input id="code" name="code" value="{{ old('code', $course->code ?? '') }}" class="w-full rounded border-gray-300">
     </div>
     <div>
-        <label for="credits" class="mb-1 block text-sm font-medium">Credits</label>
-        <input id="credits" name="credits" type="number" min="1" max="10" value="{{ old('credits', $course->credits ?? 3) }}" class="w-full rounded border-gray-300">
+        <label for="course name" class="mb-1 block text-sm font-medium">Course name</label>
+        <input id="course name" name="title" type="number" min="1" max="10" value="{{ old('courses', $course->courses ?? 3) }}" class="w-full rounded border-gray-300">
     </div>
     <div class="sm:col-span-2">
         <label for="title" class="mb-1 block text-sm font-medium">Title</label>
         <input id="title" name="title" value="{{ old('title', $course->title ?? '') }}" class="w-full rounded border-gray-300">
     </div>
     <div class="sm:col-span-2">
-        <label for="lecturer_id" class="mb-1 block text-sm font-medium">Lecturer</label>
+        <label for="lecturer_id" class="mb-1 block text-sm font-medium">Lecturer in charge</label>
         <select id="lecturer_id" name="lecturer_id" class="w-full rounded border-gray-300">
             <option value="">-- Unassigned --</option>
             @foreach ($lecturers as $lecturer)

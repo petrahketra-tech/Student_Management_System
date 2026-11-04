@@ -20,11 +20,6 @@
         <input id="phone" name="phone" type="text"
                value="{{ old('phone', $student->phone ?? '') }}" class="w-full rounded border-gray-300">
     </div>
-    <div>
-        <label for="program" class="mb-1 block text-sm font-medium">Programme</label>
-        <input id="program" name="program" type="text"
-               value="{{ old('program', $student->program ?? 'Bachelor of Business Computing') }}" class="w-full rounded border-gray-300">
-    </div>
 </div>
 <div class="mt-6 flex gap-3">
     <button class="rounded bg-indigo-600 px-4 py-2 text-white">Save</button>

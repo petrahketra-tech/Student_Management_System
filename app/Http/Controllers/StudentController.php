@@ -28,7 +28,6 @@ class StudentController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:students,email|unique:users,email',
             'phone' => 'nullable|max:20',
-            'program' => 'required|max:255',
         ]);
 
         // create a login account for the student first
@@ -64,7 +63,6 @@ class StudentController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:students,email,' . $student->id . '|unique:users,email,' . $student->user_id,
             'phone' => 'nullable|max:20',
-            'program' => 'required|max:255',
         ]);
 
         $student->update($data);
