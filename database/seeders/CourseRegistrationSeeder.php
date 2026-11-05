@@ -18,6 +18,8 @@ class CourseRegistrationSeeder extends Seeder
             '25/U/13703/EVE' => ['PROC'],
             '25/U/25094/PS' => ['BSA'],
             '25/U/12035/EVE' => ['LEIS'],
+            '25/U/17006/PS' => ['BBC'],
+            '25/U/21207/EVE' => ['BCS'],
         ];
 
         foreach ($plan as $number => $codes) {

@@ -18,6 +18,8 @@ class StudentSeeder extends Seeder
             ['25/U/13703/EVE', 'Namuganyi Desire', '2500713703@mubs.ac.ug', '0729456728'],
             ['25/U/25094/PS', 'Daniel Ssemwogerere', '2500725094@mubs.ac.ug', '0754389056'],
             ['25/U/12035/EVE', 'Nakawoya Sophie', '2500712035@mubs.ac.ug', '0706789005'],
+            ['25/U/17006/PS', 'Kigundu Constant', '2500717006@mubs.ac.ug', '0745689043'],
+            ['25/U/21207/EVE', 'Anyango Scovia', '2500721207@mubs.ac.ug', '0722567892'],
         ];
 
         foreach ($students as [$number, $name, $email, $phone]) {
