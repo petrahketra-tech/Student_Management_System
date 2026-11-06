@@ -2,6 +2,11 @@
     <x-slot name="header">Students</x-slot>
     <div class="mb-4"><a href="{{ route('students.create') }}" class="rounded bg-indigo-600 px-4 py-2 text-white">+ Add student</a></div>
 
+    <form method="GET" action="{{ route('students.index') }}" class="mb-4 flex gap-2">
+             <input type="text" name="search" value="{{ $search }}" placeholder="Search by name" class="rounded border-gray-300">
+            <button class="rounded bg-indigo-600 px-4 py-2 text-white">Search</button>
+     </form>
+
     <div class="overflow-x-auto rounded bg-white shadow">
         <table class="min-w-full text-left text-sm">
             <thead class="bg-gray-50 text-gray-600">

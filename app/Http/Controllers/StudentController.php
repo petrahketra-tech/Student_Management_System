@@ -10,10 +10,16 @@ use Illuminate\Support\Facades\Hash;
 // Only the admin can reach these routes (permission:students.manage in routes/web.php)
 class StudentController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $students = Student::withCount('courses')->paginate(10);
-        return view('students.index', compact('students'));
+        $search =$request->search;
+        $query = Student::withCount('courses');
+
+        if ($request->search) {
+            $query->where('name', 'like', '%' . $search . '%'); 
+        }
+        $students = $query->paginate(10)->withQueryString();
+        return view('students.index', compact('students', 'search'));
     }
 
     public function create()
