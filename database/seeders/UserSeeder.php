@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             // firstOrCreate = create only if this email does not exist yet
             $user = User::firstOrCreate(
                 ['email' => $email],
-                ['name' => $name, 'password' => Hash::make('password')]
+                ['name' => $name, 'password' => Hash::make('sms@26')]
             );
             $user->syncRoles([$role]);
         }

@@ -25,7 +25,7 @@ class StudentSeeder extends Seeder
         foreach ($students as [$number, $name, $email, $phone]) {
             $user = User::firstOrCreate(
                 ['email' => $email],
-                ['name' => $name, 'password' => Hash::make('password')]
+                ['name' => $name, 'password' => Hash::make('sms@26')]
             );
             $user->syncRoles(['student']);
 
