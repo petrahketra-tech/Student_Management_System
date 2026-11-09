@@ -48,7 +48,7 @@ class StudentController extends Controller
         $data['user_id'] = $user->id;
         Student::create($data);
 
-        return redirect()->route('students.index')->with('success', 'Student added. Their password is "password".');
+        return redirect()->route('students.index')->with('success', 'Student added. Their password is "sms@26".');
     }
 
     public function show(Student $student)
