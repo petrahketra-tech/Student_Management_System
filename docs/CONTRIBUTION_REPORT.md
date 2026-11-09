@@ -19,14 +19,14 @@ Group members: Nakyanzi Petra Ketra 24/U/18277/PS, Mutesi Joan 24/U/17348/PS, Mu
 | #1 | Change courses to BBC, BBA and others, remove credit units | petrahketra-tech | feature/database-and-seeders into develop | Approved and merged by MJoan505 |
 | #2 | Add more sample students and course registrations | 2400724311-ship-it | feature/database-relationships into develop | Approved and merged by MJoan505 |
 | #3 | Add search by name to the students list | MJoan505 | feature/crud-and-layouts into develop | approved and merged by petraketra-tech |
-| #4 | Update README and add contribution report | petrahketra-tech | feature/readme-and-report into develop | open / merged |
-| #5 | Final merge | petrahketra-tech | develop into main | open / merged |
+| #4 | Update README and add contribution report | petrahketra-tech | feature/readme-and-report into develop | approved by MJoan505 and merged by 2400724311-ship-it |
+| #5 | Final merge | petrahketra-tech | develop into main |  |
 
 ## Branching and review
 
 - `main` holds the stable code and `develop` is used for integration
 - Each member used their own feature branch and opened pull requests into `develop`
-- Reviews: #1 approved by MJoan505, #2 approved by MJoan505, #3 approved by petrahketra-tech, #4 approved by 2400724311-ship-it, #5 approved by MJoan505
+- Reviews: #1 approved by MJoan505, #2 approved by MJoan505, #3 approved by petrahketra-tech, #4 approved by 2400724311-ship-it, #5 approved by 2400724311-ship-it
 
 ## Testing
 
