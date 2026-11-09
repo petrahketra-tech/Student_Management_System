@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    protected $fillable = ['user_id', 'student_number', 'name', 'email', 'phone', 'program'];
+    protected $fillable = ['user_id', 'student_number', 'name', 'email', 'phone'];
 
     // a student belongs to one user (their login account)
     public function user()

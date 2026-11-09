@@ -11,8 +11,8 @@
         <table class="min-w-full text-left text-sm">
             <thead class="bg-gray-50 text-gray-600">
                 <tr>
-                    <th class="p-3">Code</th><th class="p-3">Title</th><th class="p-3">Credits</th>
-                    <th class="p-3">Lecturer</th><th class="p-3">Students</th><th class="p-3">Actions</th>
+                    <th class="p-3">Code</th><th class="p-3">Course name</th><th class="p-3">lecturer in charge</th>
+                    <th class="p-3">Students</th><th class="p-3">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,7 +20,6 @@
                     <tr class="border-t">
                         <td class="p-3">{{ $course->code }}</td>
                         <td class="p-3">{{ $course->title }}</td>
-                        <td class="p-3">{{ $course->credits }}</td>
                         <td class="p-3">{{ $course->lecturer ? $course->lecturer->name : '-' }}</td>
                         <td class="p-3">{{ $course->students_count }}</td>
                         <td class="flex gap-3 p-3">

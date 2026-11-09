@@ -13,11 +13,13 @@ class CourseRegistrationSeeder extends Seeder
     {
         // student number => the course codes they register for
         $plan = [
-            '2026/BBC/001' => ['BUC3131', 'BUC3130', 'BUC2230'],
-            '2026/BBC/002' => ['BUC3131', 'BUC3126'],
-            '2026/BBC/003' => ['BUC3130', 'BUC3126', 'BUC2230'],
-            '2026/BBC/004' => ['BUC3131'],
-            '2026/BBC/005' => ['BUC3131', 'BUC3130'],
+            '25/U/15001/PS' => ['BBC'],
+            '25/U/20452/PS' => ['BBA'],
+            '25/U/13703/EVE' => ['PROC'],
+            '25/U/25094/PS' => ['BSA'],
+            '25/U/12035/EVE' => ['LEIS'],
+            '25/U/17006/PS' => ['BBC'],
+            '25/U/21207/EVE' => ['BCS'],
         ];
 
         foreach ($plan as $number => $codes) {

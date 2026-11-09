@@ -10,10 +10,16 @@ use Illuminate\Support\Facades\Hash;
 // Only the admin can reach these routes (permission:students.manage in routes/web.php)
 class StudentController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $students = Student::withCount('courses')->paginate(10);
-        return view('students.index', compact('students'));
+        $search =$request->search;
+        $query = Student::withCount('courses');
+
+        if ($request->search) {
+            $query->where('name', 'like', '%' . $search . '%'); 
+        }
+        $students = $query->paginate(10)->withQueryString();
+        return view('students.index', compact('students', 'search'));
     }
 
     public function create()
@@ -28,7 +34,6 @@ class StudentController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:students,email|unique:users,email',
             'phone' => 'nullable|max:20',
-            'program' => 'required|max:255',
         ]);
 
         // create a login account for the student first
@@ -43,7 +48,7 @@ class StudentController extends Controller
         $data['user_id'] = $user->id;
         Student::create($data);
 
-        return redirect()->route('students.index')->with('success', 'Student added. Their password is "password".');
+        return redirect()->route('students.index')->with('success', 'Student added. Their password is "sms@26".');
     }
 
     public function show(Student $student)
@@ -64,7 +69,6 @@ class StudentController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:students,email,' . $student->id . '|unique:users,email,' . $student->user_id,
             'phone' => 'nullable|max:20',
-            'program' => 'required|max:255',
         ]);
 
         $student->update($data);

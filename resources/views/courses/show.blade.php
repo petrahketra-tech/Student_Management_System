@@ -2,8 +2,7 @@
     <x-slot name="header">{{ $course->code }} - {{ $course->title }}</x-slot>
 
     <div class="mb-6 rounded bg-white p-6 shadow">
-        <p><strong>Credits:</strong> {{ $course->credits }}</p>
-        <p><strong>Lecturer:</strong> {{ $course->lecturer ? $course->lecturer->name : 'Not assigned' }}</p>
+        <p><strong>Lecturer in charge:</strong> {{ $course->lecturer ? $course->lecturer->name : 'Not assigned' }}</p>
         <p class="mt-2">{{ $course->description ?? 'No description.' }}</p>
 
         @can('registrations.create-own')
