@@ -20,7 +20,7 @@ Group members: Nakyanzi Petra Ketra 24/U/18277/PS, Mutesi Joan 24/U/17348/PS, Mu
 | #2 | Add more sample students and course registrations | 2400724311-ship-it | feature/database-relationships into develop | Approved and merged by MJoan505 |
 | #3 | Add search by name to the students list | MJoan505 | feature/crud-and-layouts into develop | approved and merged by petraketra-tech |
 | #4 | Update README and add contribution report | petrahketra-tech | feature/readme-and-report into develop | approved by MJoan505 and merged by 2400724311-ship-it |
-| #5 | Final merge | petrahketra-tech | develop into main |  |
+| #5 | Final merge | petrahketra-tech | develop into main | 2400724311-ship-it |
 
 ## Branching and review
 
